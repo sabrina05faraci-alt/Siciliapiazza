@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px; 
+    font-weight: 400;
+    line-height: 29px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: #003672;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;    
+}
+
+.logo {
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo:hover {
+    opacity: 0.85;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #FFFFFF;
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   SEZIONE 1: HERO HOME (Mappa grande e sovrapposta)
+========================================= */
+.hero {
+    max-width: 1308px; 
+    margin: 20px auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.hero-text {
+    max-width: 559px;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 96px; 
+    font-weight: 700; 
+    line-height: 104px; 
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #000000;
+}
+
+.hero-text p {
+    width: 100%; 
+    margin-bottom: 32px;
+}
+
+.btn-esplora {
+    background-color: #003672;
+    color: #FFFFFF;
+    width: 237px; 
+    height: 44px; 
+    border-radius: 22px; 
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-esplora:hover {
+    opacity: 0.85; 
+    text-decoration: underline; 
+    transform: scale(1.02); 
+}
+
+.hero-images {
+    display: flex;
+    gap: 16px;
+    position: relative; /* Per posizionare la mappa in modo assoluto dietro/sotto le immagini */
+    min-height: 566px;
+    background: none !important;
+}
+
+/* Mappa grande nella Home */
+.mappa-home {
+    width: 820px !important; 
+    height: auto !important;
+    object-fit: contain;
+    position: absolute;
+    top: -20px;
+    left: -75px; /* Spostata verso destra: ora sporge solo una piccola puntina da dietro l'immagine! */
+    z-index: 0;   
+    border-radius: 0;
+}
+
+.hero-images-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.img-caltanissetta, .img-messina, .img-catania, .img-agrigento, .img-ragusa,
+.img-siracusa, .img-palermo, .img-trapani, .img-enna {
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.img-caltanissetta {
+    width: 302px;
+    height: 506px;
+    background: url('../img/Caltanissetta.jpg') lightgray -118.906px 0.394px / 251.656% 100.107% no-repeat;
+    z-index: 1;
+}
+
+.img-messina {
+    width: 302px;
+    height: 363px;
+    background: url('../img/Messina 2.jpg') lightgray -66.189px 0.126px / 172.848% 99.986% no-repeat;
+}
+
+.img-catania {
+    width: 302px;
+    height: 229px;
+    background: url('../img/catania 3.jpg') lightgray -38.022px 0px / 124.849% 100% no-repeat;
+}
+
+.circle-arrow {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle-arrow:hover {
+    transform: scale(1.1); 
+    background-color: #f0f4f8; 
+    box-shadow: 0 4px 8px rgba(0,54,114,0.3);
+}
+
+.memoria {
+    background-color: rgba(0, 54, 114, 0.2); 
+    padding: 64px 16px;
+    margin-top: 64px;
+}
+
+.memoria-container {
+    max-width: 1308px;
+    margin: auto;
+}
+
+.memoria-container h2 {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: #000000; 
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    white-space: nowrap; 
+}
+
+.memoria-arrow {
+    transform: rotate(0deg);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.memoria-arrow:hover {
+    transform: translateX(6px);
+}
+
+.memoria-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.memoria-text p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    width: 495px;
+    margin-bottom: 24px;
+}
+
+.memoria-images {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.img-agrigento {
+    width: 367px;
+    height: 506px;
+    background: url('../img/agrigento.jpg') lightgray -237.65px -0.422px / 245.012% 100% no-repeat;
+}
+
+.img-ragusa {
+    width: 365px;
+    height: 327px;
+    background: url('../img/Ragusa.jpg') lightgray -88.778px 0px / 159.049% 100% no-repeat;
+}
+
+.card-caption p, .card p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.card-caption p {
+    margin: 12px 0 0 0;
+    width: 332px;
+}
+
+.card p {
+    margin-top: 12px;
+}
+
+.card-caption p svg, .card p svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.piazze-grid {
+    max-width: 1308px;
+    margin: 64px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 24px;
+}
+
+.img-siracusa {
+    width: 100%;
+    height: 506px;
+    background: url('../img/Siracusa.jpg') center/cover no-repeat;
+}
+
+.img-palermo {
+    width: 100%;
+    height: 506px;
+    background: url('../img/Palermo.jpg') center/cover no-repeat;
+}
+
+.img-trapani {
+    width: 100%;
+    height: 506px; 
+    background: url('../img/Trapani.jpg') center/cover no-repeat;
+}
+
+.img-enna {
+    width: 100%;
+    height: 506px;
+    background: url('../img/Enna.jpg') center/cover no-repeat;
+}
+
+footer {
+    background-color: #003672;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    margin: 0 12px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1350px) {
+    .hero, .memoria-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-images, .memoria-images {
+        margin-top: 32px;
+    }
+    .piazze-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .memoria-container h2 {
+        white-space: normal; 
+    }
+    .mappa-home {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        gap: 16px;
+        white-space: normal; 
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    /* Nasconde la mappa della Sicilia su smartphone */
+    .mappa-home {
+        display: none !important;
+    }
+
+    .piazze-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-text h1 {
+        font-size: 48px;
+        line-height: 56px; 
+    }
+    .hero-text p, .memoria-text p, .memoria-container h2, .card-caption p {
+        width: 100%;
+    }
+    .hero-images, .memoria-images {
+        flex-direction: column;
+        width: 100%;
+        background: none; 
+    }
+    .img-caltanissetta, .img-messina, .img-catania, .img-agrigento, .img-ragusa,
+    .img-siracusa, .img-palermo, .img-trapani, .img-enna {
+        width: 100% !important;
+        height: 400px !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}

@@ -1,0 +1,390 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px; 
+    font-weight: 400;
+    line-height: 29px;
+    background-color: #FFFFFF;
+    color: #000000;
+    overflow-x: hidden; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: #003672;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;    
+}
+
+.logo {
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo:hover {
+    opacity: 0.85;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #FFFFFF;
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   SEZIONE 1: HERO PROGETTO
+========================================= */
+.progetto-hero {
+    max-width: 1308px;
+    margin: 20px auto 16px auto;
+    padding: 0 16px;
+}
+
+.progetto-hero-content {
+    position: relative; 
+    min-height: 520px;  
+}
+
+.progetto-text {
+    position: relative;
+    z-index: 2; 
+    max-width: 900px; 
+}
+
+.progetto-text h1 {
+    font-size: clamp(36px, 7vw, 96px); /* Titolo fluido e sicuro */
+    font-weight: 700; 
+    line-height: 1.1; 
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: #000000;
+}
+
+.testo-storia {
+    white-space: nowrap; 
+}
+
+.progetto-text p {
+    width: 100%;
+    max-width: 550px;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+}
+
+/* Posizionamento corretto della mappa della Sicilia dietro al testo */
+.progetto-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Permette di cliccare attraverso la mappa */
+}
+
+.mappa-progetto {
+    width: 780px !important; 
+    height: auto !important;
+    object-fit: contain;
+    position: absolute;
+    top: -30px; 
+    left: 600px; /* Posizione esatta dietro la parte destra del testo */
+    border-radius: 0;
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    margin: -45px 0 24px 0; 
+    position: relative;
+    z-index: 3;
+}
+
+/* =========================================
+   BARRA DELLE 4 ICONE
+========================================= */
+.features-bar {
+    background-color: rgba(0, 54, 114, 0.2);
+    width: 100%; 
+    padding: 40px 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.features-bar-container {
+    max-width: 1308px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.feature-icon img {
+    /* Dimensioni originali senza alterazioni */
+    border-radius: 0;
+}
+
+.feature-item span {
+    font-weight: 400; 
+    font-size: 22px;
+    color: #000000;
+}
+
+.criteri-section {
+    max-width: 1308px;
+    margin: 80px auto;
+    padding: 0 16px;
+}
+
+.criteri-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.criteri-col {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.criterio-box p {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    color: #333333;
+}
+
+.img-progetto-centrale {
+    width: 420px;
+    height: 350px;
+    border-radius: 20px;
+    background: url('../img/agrigento 2.jpg') center/cover no-repeat;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cerchi-section {
+    background-color: rgba(0, 54, 114, 0.2);
+    padding: 80px 16px;
+    margin-top: 80px;
+}
+
+.cerchi-container {
+    max-width: 1308px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+.cerchio-item {
+    width: 340px;
+    height: 340px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.cerchio-item p {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    color: #222222;
+}
+
+footer {
+    background-color: #003672;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 80px;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    margin: 0 12px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE)
+========================================= */
+
+@media screen and (max-width: 1200px) {
+    .progetto-hero-content {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        min-height: auto;
+        gap: 32px;
+    }
+    
+    .progetto-map {
+        position: relative;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .mappa-progetto {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: 100% !important;
+        max-width: 450px !important;
+        height: auto !important;
+    }
+    
+    .progetto-text {
+        max-width: 100%;
+        text-align: left; 
+    }
+
+    .testo-storia {
+        white-space: normal; 
+    }
+
+    .progetto-text p {
+        width: 100%;
+        max-width: 100%;
+        text-align: left; 
+    }
+    
+    .criteri-container {
+        flex-direction: column;
+        align-items: stretch; 
+        text-align: left;     
+    }
+
+    .cerchi-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .features-bar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+    
+    .criteri-col {
+        width: 100%;
+        text-align: left; 
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        gap: 16px;
+        white-space: normal;
+        text-align: center;
+    }
+    .cerchio-item {
+        width: 280px;
+        height: 280px;
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .features-bar-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .feature-item {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .img-progetto-centrale {
+        width: 100%;
+        max-width: 320px;
+        height: 280px;
+        margin: 0 auto; 
+    }
+    
+    .cerchio-item {
+        width: 240px;
+        height: 240px;
+        padding: 20px;
+    }
+}
